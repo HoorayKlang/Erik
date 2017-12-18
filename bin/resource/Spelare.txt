@@ -1,3 +1,0 @@
-
-Spelare0 : JaronAge: 21
-Spelare1 : DanielAge: 32
