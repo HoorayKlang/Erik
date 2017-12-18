@@ -1,31 +1,26 @@
 package erik;
 
-import filehandler.FileHandler;
-
 public class Adventurer extends User {
 
+	private Scanner scan;
 
 	private String[] choice;
 
-	public Adventurer(int age, String name) {
+	public Adventurer(int age, String name, Scanner scan) {
 		this.name = name;
 		this.age = age;
+		this.scan = scan;
 		this.choice = new String[4];
 	}
-	
-	public void choice(String data, int l){
-	
-			this.choice[l] = data;
-			FileHandler fh = new FileHandler("choices.txt");
-			
-			fh.addLine("Player " + this.name + " Choice " + l + ": " + data);
-			
-	}
-	
-	public void printFile(){
-		
-		
-	}
+
+public void choice(String data){
+
+		choice[1] = data;
+}
+
+public void printFile(){
+
+}
 
 	@Override
 	public void greet() {

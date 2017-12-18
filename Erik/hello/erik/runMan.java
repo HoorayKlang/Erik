@@ -8,7 +8,6 @@ import filehandler.FileHandler;
 
 public class runMan {
 	
-	private boolean running = true;
 	private List<Adventurer> playerList = new ArrayList();
 	private List<String> sidetrack = new ArrayList();
 	public runMan() {
@@ -20,8 +19,7 @@ public class runMan {
 		fh.addLine("Hej erik");
 		
 		Adventurer player = null;
-		
-		
+
 		Scanner scanner = new Scanner(System.in);
 		int numberOfPlayers = 0;
 		String[] data = new String[2];
@@ -50,21 +48,38 @@ public class runMan {
 		String test = scanner.nextLine();
 		if("yes".equals(test)) {
 			playerList.get(choose).ding();
+			playerList.get(choose).choice(test, 0);
+			
 			fh.addLine(playerList.get(choose).sayName() + " is now legally blind.");
 
 			fh.addLine(playerList.get(choose).sayName() + " is now " + playerList.get(choose).sayAge() + " years old.");
 		}
 		System.out.println(playerList.get(choose).sayAge());
 		
+		
 		fh = new FileHandler("Spelare.txt");		
 		for(int i = 0; i < numberOfPlayers; i++) {
 			fh.addLine("Spelare"  + i + " : " + playerList.get(i).sayName() + "Age: " + playerList.get(i).age);
 		}
+		
+		fh = new FileHandler("intro.txt");
+		String tesst = fh.read();
+		
+		System.out.println(tesst);
+		playerList.size();
+		System.out.println(printPlayers());
+		//if(tesst.equals("<players>")) {
+			
+			tesst = printPlayers();
+	//	}
+		
+		System.out.println(tesst);
+		
 		//Babbys first commit
 	}
 	
 	public String printPlayers() {
-		String data = null;
+		String data = "";
 		for(int i = 0; i < playerList.size(); i++) {
 			data += playerList.get(i).sayAge() + playerList.get(i).sayName();
 		}	
@@ -72,6 +87,9 @@ public class runMan {
 		return data;
 	}
 
+	
+	
+	
 	public static void main(String[] args) {
 
 		runMan r = new runMan();

@@ -1,11 +1,6 @@
-Det var en mörk natt. <Spelare0> och <Spelare1> var påväg tillbaka till hoodet
-efter en driveby.
 
-Men fick punktering...
+Hej erik
+Player 1: m is 1Years old
 
-<Spelare0> styrde bilen till vägkanten.
-De blev rädda, gick ut ur bilen och såg en stig.
-
-<Spelare1.choice>
-<Spelare1.choice.opt1>Ja
-<Spelare1.choice.opt2>Nej
+m is now legally blind.
+m is now 2 years old.
